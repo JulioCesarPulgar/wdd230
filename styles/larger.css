@@ -1,0 +1,19 @@
+/* larger.css */
+
+/* Larger View Styles */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .card:first-child {
+        grid-column: span 2;
+    }
+}
