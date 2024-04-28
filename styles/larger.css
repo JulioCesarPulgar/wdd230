@@ -1,19 +1,18 @@
-/* larger.css */
-
-/* Larger View Styles */
-@media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: center;
+  /* Larger View Styles */
+  @media (min-width: 768px) {
+    .card {
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 20px;
+  
+    .card--learning {
+      grid-template-columns: 2fr 1fr;
     }
-
-    .card:first-child {
-        grid-column: span 2;
+  
+    .nav {
+      flex-direction: row;
     }
-}
+  
+    .main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
