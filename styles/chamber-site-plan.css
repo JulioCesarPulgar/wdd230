@@ -1,0 +1,70 @@
+/* chamber-site-plan.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #004d99;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #004d99;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#wireframe .wireframe-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+#wireframe .wireframe-images img {
+    max-width: 45%;
+    height: auto;
+}
+
+/* Color Schema */
+#color-schema ul li {
+    color: #333;
+}
+
+/* Typography */
+#typography ul li {
+    font-family: Georgia, serif;
+}
+
+/* Developmental Specifications */
+#developmental-specifications ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#developmental-specifications ul li {
+    margin-bottom: 10px;
+}
