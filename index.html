@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julio Cesar Pulgar - WDD 230 - Web Frontend Development</title>
-    <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal for Julio Cesar Pulgar">
+    <title>W02: Course Home Page Enhancement</title>
+    <meta name="description" content="W02: Course Home Page Enhancement">
     <meta name="author" content="Julio Cesar Pulgar">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 768px)">
@@ -12,9 +12,10 @@
 <body>
     <header>
         <img src="images/profile.jpg" alt="Profile picture of Julio Cesar Pulgar">
-        <span>Julio Cesar Pulgar</span>
+        <h1>Julio Cesar Pulgar</h1>
     </header>
     <nav>
+        <button class="hamburger">&#9776;</button>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Chamber</a></li>
@@ -28,10 +29,14 @@
             <section class="learning-activities">
                 <h2>Learning Activities</h2>
                 <ul>
+                    <li>Week 1: HTML Basics</li>
+                    <li>Week 2: CSS Fundamentals</li>
+                    <li>Week 3: JavaScript Essentials</li>
                 </ul>
             </section>
             <section class="information">
                 <h2>Information</h2>
+                <p>Welcome to the Web Frontend Development course portal. Here you will find resources, assignments, and information about the course.</p>
             </section>
         </section>
     </main>
@@ -39,6 +44,8 @@
         <p>&copy; <script>document.write(new Date().getFullYear())</script> Julio Cesar Pulgar <span id="location">Venezuela</span></p>
         <p id="lastModified">Last modified: <script>document.write(document.lastModified)</script></p>
     </footer>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
     <script src="./scripts/getDates.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

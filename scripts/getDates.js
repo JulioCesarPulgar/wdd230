@@ -1,9 +1,14 @@
-// getDates.js
+document.addEventListener('DOMContentLoaded', function () {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+    
+    const yearSpan = document.querySelectorAll('.current-year');
+    yearSpan.forEach(span => {
+        span.textContent = currentYear;
+    });
 
-// Copyright year
-let yearSpan = document.getElementById('year');
-yearSpan.textContent = new Date().getFullYear();
-
-// Last modified date
-let lastModified = document.getElementById('lastModified');
-lastModified.textContent = "Last modified: " + document.lastModified;
+    const lastModifiedSpan = document.querySelectorAll('.last-modified');
+    lastModifiedSpan.forEach(span => {
+        span.textContent = lastModified;
+    });
+});
