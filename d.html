@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W02: Course Home Page Enhancement</title>
+    <meta name="description" content="W02: Course Home Page Enhancement">
+    <meta name="author" content="Julio Cesar Pulgar">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
+    <style>
+        /* Estilos del menú */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilos del menú hamburguesa */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #111;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Profile picture of Julio Cesar Pulgar">
+        <h1>Julio Cesar Pulgar</h1>
+    </header>
+    <nav>
+        <button class="hamburger">&#9776;</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="card">
+            <h1>WDD 230: Web Frontend Development</h1>
+            <section class="learning-activities">
+                <h2>Learning Activities</h2>
+                <ul>
+                    <li>Week 1: HTML Basics</li>
+                    <li>Week 2: CSS Fundamentals</li>
+                    <li>Week 3: JavaScript Essentials</li>
+                </ul>
+            </section>
+            <section class="information">
+                <h2>Information</h2>
+                <p>Welcome to the Web Frontend Development course portal. Here you will find resources, assignments, and information about the course.</p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Julio Cesar Pulgar <span id="location">Venezuela</span></p>
+        <p id="lastModified">Last modified: <script>document.write(document.lastModified)</script></p>
+    </footer>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <script src="./scripts/getDates.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script>
+        // Función para activar/desactivar el menú hamburguesa
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
