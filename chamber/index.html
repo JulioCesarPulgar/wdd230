@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.ico">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Chamber of Commerce Logo">
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="burger"><span></span></label>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- Main Content -->
+<main>
+    <section class="hero">
+        <img src="./images/hero_imagen.png" alt="Welcome to Our City">
+    </section>
+    
+    <section class="cta">
+        <h2>Join the Chamber of Commerce</h2>
+        <p>Learn about the benefits of becoming a member and join us today!</p>
+        <a href="#" class="btn">Join Now</a>
+    </section>
+    
+    <section class="events">
+        <h2>Current Events</h2>
+        <ul>
+            <li>Event 1</li>
+            <li>Event 2</li>
+            <li>Event 3</li>
+        </ul>
+    </section>
+    
+    <section class="weather">
+        <h2>Weather</h2>
+        <p id="weather-info">Loading...</p>
+    </section>
+    
+    <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <div class="spotlight">
+            <h3>Spotlight Business 1</h3>
+            <p>Description of Business 1</p>
+        </div>
+        <div class="spotlight">
+            <h3>Spotlight Business 2</h3>
+            <p>Description of Business 2</p>
+        </div>
+        <div class="spotlight">
+            <h3>Spotlight Business 3</h3>
+            <p>Description of Business 3</p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="contact-info">
+        <p>Contact Us: example@email.com | 123-456-7890</p>
+    </div>
+    <div class="development-info">
+        <p>Developed by: Julio Cesar Pulgar | WDD 230 Project | Last Updated: <span id="lastModified"></span></p>
+    </div>
+</footer>
+
+<!-- JavaScript for Last Modified Date -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lastModified = document.lastModified;
+        var lastModifiedElement = document.getElementById('lastModified');
+        if (lastModifiedElement) {
+            lastModifiedElement.textContent = lastModified;
+        }
+    });
+</script>
+</body>
+</html>
