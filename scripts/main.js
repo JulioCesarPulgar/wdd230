@@ -1,13 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   // Función para activar/desactivar el menú hamburguesa
-  document.querySelector('.hamburger').addEventListener('click', function() {
-      document.querySelector('nav ul').classList.toggle('active');
-  });
-});
+  const hamburger = document.querySelector('.hamburger');
+  const navUl = document.querySelector('nav ul');
 
-document.addEventListener("DOMContentLoaded", function() {
+  hamburger.addEventListener('click', () => {
+    navUl.classList.toggle('active');
+  });
+
+  // Función para contar las visitas
   let visitCount = localStorage.getItem("visitCount") || 0;
-  document.getElementById("visitCount").textContent = visitCount;
+  const visitCountElement = document.getElementById("visitCount");
+
+  visitCountElement.textContent = visitCount;
   visitCount++;
+
   localStorage.setItem("visitCount", visitCount);
 });

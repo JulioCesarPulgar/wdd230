@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
     const lastModified = document.lastModified;
-    
-    const yearSpan = document.querySelectorAll('.current-year');
-    yearSpan.forEach(span => {
+  
+    // Use a single querySelectorAll and loop through the results
+    const dynamicSpans = document.querySelectorAll('.current-year, .last-modified');
+  
+    dynamicSpans.forEach(span => {
+      if (span.classList.contains('current-year')) {
         span.textContent = currentYear;
-    });
-
-    const lastModifiedSpan = document.querySelectorAll('.last-modified');
-    lastModifiedSpan.forEach(span => {
+      } else {
         span.textContent = lastModified;
+      }
     });
-});
+  });
